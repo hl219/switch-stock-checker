@@ -1,4 +1,5 @@
 var aws = require('aws-sdk');
+aws.config.loadFromPath('./config.json');
 var ses = new aws.SES({ region: 'us-west-2' });
 var request = require('request');
 var cheerio = require('cheerio');
@@ -9,8 +10,8 @@ const checkInventory = () => {
     //Paste the cookie of your browser when you manually check website with a browser
     const cookie = "";
     //Set up in AWS SES following tutorial
-    const sourceEmailAddr = "xyz@gmail.com";
-    const destinationEmailAddrs = ["abc@qq.com"];
+    const sourceEmailAddr = "219luohao@gmail.com";
+    const destinationEmailAddrs = ["219luohao@gmail.com","184874361@qq.com"];
     
     const req = {
         url: url,
